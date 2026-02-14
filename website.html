@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Freddie 🎉</title>
+  <meta name="description" content="A birthday page for Freddie." />
+  <style>
+    :root{
+      --bg:#0b0d12;
+      --card:#111522;
+      --text:#e9ecf1;
+      --muted:#a7afc0;
+      --line:rgba(255,255,255,.08);
+      --shadow: 0 12px 40px rgba(0,0,0,.45);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 20% 0%, rgba(120,160,255,.18), transparent 60%),
+                  radial-gradient(1200px 700px at 90% 10%, rgba(255,140,200,.12), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 70px}
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 16px;border:1px solid var(--line);
+      background:rgba(17,21,34,.6);backdrop-filter: blur(10px);
+      border-radius:999px; box-shadow: var(--shadow);
+      position:sticky;top:14px;z-index:20;
+    }
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700;letter-spacing:.2px}
+    .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,#7aa2ff,#ff8ac8)}
+    .links{display:flex;gap:14px;font-size:14px;color:var(--muted)}
+    .links a{opacity:.9;text-decoration:none}
+    .links a:hover{opacity:1;color:var(--text)}
+    .hero{
+      margin-top:22px;
+      border:1px solid var(--line);
+      background: rgba(17,21,34,.55);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      padding: 34px 26px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;inset:-2px;
+      background: radial-gradient(700px 260px at 20% 30%, rgba(122,162,255,.18), transparent 55%),
+                  radial-gradient(520px 220px at 85% 35%, rgba(255,138,200,.12), transparent 60%);
+      pointer-events:none;
+    }
+    .hero > *{position:relative}
+    .kicker{
+      display:inline-flex;gap:10px;align-items:center;
+      padding:8px 12px;border:1px solid var(--line);
+      border-radius:999px;background:rgba(255,255,255,.03);
+      color:var(--muted);font-size:13px;
+    }
+    .title{
+      margin:16px 0 8px;
+      font-size: clamp(34px, 6vw, 54px);
+      letter-spacing:-.6px;
+      line-height:1.05;
+    }
+    .subtitle{max-width:62ch;color:var(--muted);font-size:16px;margin:0 0 18px}
+    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      color:var(--text);
+      border-radius:999px;
+      padding:11px 15px;
+      cursor:pointer;
+      font-weight:600;
+      transition: transform .08s ease, background .2s ease, border-color .2s ease;
+    }
+    .btn:hover{background:rgba(255,255,255,.08)}
+    .btn:active{transform: translateY(1px)}
+    .btn.primary{
+      background:linear-gradient(135deg, rgba(122,162,255,.95), rgba(255,138,200,.92));
+      border-color: transparent;
+      color:#0b0d12;
+    }
+
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:18px}
+    .card{
+      grid-column: span 6;
+      border:1px solid var(--line);
+      background:rgba(17,21,34,.55);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .list{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+    .pill{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:14px;
+      padding:12px 12px;
+      display:flex;gap:10px;align-items:flex-start;
+    }
+    .emoji{width:28px;height:28px;display:grid;place-items:center;border-radius:10px;background:rgba(255,255,255,.05);flex:0 0 auto}
+    .pill strong{display:block;font-size:14px}
+    .pill span{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+
+    .section{
+      margin-top:18px;
+      border:1px solid var(--line);
+      background:rgba(17,21,34,.55);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .sectionHeader{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin-bottom:10px}
+    .sectionHeader h2{margin:0;font-size:18px}
+    .hint{color:var(--muted);font-size:13px}
+
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+      margin-top:10px;
+    }
+    .ph{
+      border:1px dashed rgba(255,255,255,.18);
+      border-radius: 16px;
+      padding:16px;
+      background: rgba(255,255,255,.02);
+      color: var(--muted);
+      min-height:120px;
+      display:flex;flex-direction:column;justify-content:space-between;
+    }
+    .ph small{opacity:.9}
+    .ph b{color:var(--text)}
+    .footer{
+      margin-top:18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      opacity:.95;
+    }
+    dialog{
+      border:none;
+      border-radius:18px;
+      background: rgba(17,21,34,.92);
+      color: var(--text);
+      box-shadow: 0 30px 80px rgba(0,0,0,.6);
+      width:min(640px, 92vw);
+      padding:0;
+    }
+    dialog::backdrop{background:rgba(0,0,0,.55)}
+    .modal{
+      padding:18px;
+      border:1px solid var(--line);
+      border-radius:18px;
+    }
+    .modalHeader{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .modalHeader h3{margin:0;font-size:16px}
+    .x{background:transparent;border:1px solid var(--line);color:var(--text);border-radius:999px;padding:8px 10px;cursor:pointer}
+    .x:hover{background:rgba(255,255,255,.06)}
+    .modal p{color:var(--muted);margin:12px 0 0}
+    .bigMsg{
+      margin-top:12px;
+      padding:14px;
+      border-radius:16px;
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      color:var(--text);
+      font-size:15px;
+      line-height:1.55;
+      white-space: pre-wrap;
+    }
+    @media (max-width: 780px){
+      .card{grid-column: span 12}
+      .gallery{grid-template-columns:1fr}
+      .links{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Freddie’s Birthday</span>
+      </div>
+      <div class="links">
+        <a href="#highlights">Highlights</a>
+        <a href="#memories">Memories</a>
+        <a href="#message">Message</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="kicker">🎂 <span id="ageLine">Happy Birthday</span></div>
+      <h1 class="title">Happy Birthday, <span id="name">Freddie</span> 🎉</h1>
+      <p class="subtitle">
+        A little page to celebrate the legend himself — memories, laughs, and a proper message at the end.
+      </p>
+
+      <div class="ctaRow">
+        <button class="btn primary" id="openSurprise">Open the message</button>
+        <button class="btn" id="confetti">Throw confetti</button>
+        <button class="btn" id="copyLink">Copy this link</button>
+      </div>
+    </section>
+
+    <div class="grid" id="highlights">
+      <div class="card">
+        <h3>Why you’re top tier</h3>
+        <ul class="list">
+          <li class="pill"><div class="emoji">✅</div><div><strong>Always shows up</strong><span>Proper reliable — the group needs that.</span></div></li>
+          <li class="pill"><div class="emoji">😂</div><div><strong>Elite humour</strong><span>Even when it’s uncalled for. Especially then.</span></div></li>
+          <li class="pill"><div class="emoji">🧠</div><div><strong>Good energy</strong><span>Makes plans better just by being there.</span></div></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Freddie stats (official)</h3>
+        <ul class="list">
+          <li class="pill"><div class="emoji">⭐</div><div><strong>Vibes</strong><span>10/10 consistently.</span></div></li>
+          <li class="pill"><div class="emoji">📈</div><div><strong>Glow-up</strong><span>Year-on-year improvements, obviously.</span></div></li>
+          <li class="pill"><div class="emoji">🫡</div><div><strong>Loyalty</strong><span>Real one behaviour.</span></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="section" id="memories">
+      <div class="sectionHeader">
+        <h2>Memories</h2>
+        <div class="hint">Replace these placeholders with your photos + captions</div>
+      </div>
+
+      <div class="gallery">
+        <div class="ph">
+          <div>
+            <b>Photo 1</b>
+            <p style="margin:8px 0 0; color: var(--muted); font-size:13px;">Caption: “That day we …”</p>
+          </div>
+          <small>Tip: You can swap these boxes for real images later.</small>
+        </div>
+
+        <div class="ph">
+          <div>
+            <b>Photo 2</b>
+            <p style="margin:8px 0 0; color: var(--muted); font-size:13px;">Caption: “Unreal moment.”</p>
+          </div>
+          <small>Keep captions short + funny.</small>
+        </div>
+
+        <div class="ph">
+          <div>
+            <b>Photo 3</b>
+            <p style="margin:8px 0 0; color: var(--muted); font-size:13px;">Caption: “Never living this down.”</p>
+          </div>
+          <small>We can add a proper photo grid after.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="message">
+      <div class="sectionHeader">
+        <h2>Birthday message</h2>
+        <div class="hint">Click “Open the message” at the top</div>
+      </div>
+      <p style="margin:0;color:var(--muted);font-size:14px;">
+        I wrote something you can customise. If you send me 5 bullet points about Freddie, I’ll rewrite it perfectly in your tone.
+      </p>
+    </section>
+
+    <div class="footer">
+      Made with love (and a bit of chaos). 🎈
+    </div>
+  </div>
+
+  <dialog id="surpriseModal">
+    <div class="modal">
+      <div class="modalHeader">
+        <h3>For Freddie 💙</h3>
+        <button class="x" id="closeModal">Close</button>
+      </div>
+      <p>This is your main birthday message. Edit it to make it personal.</p>
+      <div class="bigMsg" id="bigMsg">
+Happy birthday Freddie!
+
+Honestly, you’re one of the best people to have around — always good energy, always down for a laugh, and you make everything more fun just by being there.
+
+Hope this year brings you more wins, more memories, and less nonsense (but not zero nonsense, because that’s part of the brand).
+
+Have an unreal day. You deserve it. 🎂🎉
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    const modal = document.getElementById("surpriseModal");
+    const openBtn = document.getElementById("openSurprise");
+    const closeBtn = document.getElementById("closeModal");
+    const confettiBtn = document.getElementById("confetti");
+    const copyBtn = document.getElementById("copyLink");
+
+    openBtn.addEventListener("click", () => modal.showModal());
+    closeBtn.addEventListener("click", () => modal.close());
+
+    // Simple confetti (no libraries)
+    confettiBtn.addEventListener("click", () => {
+      const count = 140;
+      for (let i = 0; i < count; i++) {
+        const p = document.createElement("span");
+        p.style.position = "fixed";
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.top = "-10px";
+        p.style.width = "8px";
+        p.style.height = "12px";
+        p.style.borderRadius = "3px";
+        p.style.opacity = "0.95";
+        p.style.zIndex = "9999";
+        p.style.background = `hsl(${Math.random()*360}, 90%, 65%)`;
+        p.style.transform = `rotate(${Math.random()*360}deg)`;
+        document.body.appendChild(p);
+
+        const fall = 800 + Math.random() * 900;
+        const drift = (Math.random() - 0.5) * 180;
+
+        p.animate([
+          { transform: p.style.transform, top: "-10px" },
+          { transform: `translateX(${drift}px) rotate(${Math.random()*720}deg)`, top: "110vh" }
+        ], { duration: fall, easing: "cubic-bezier(.2,.7,.2,1)" });
+
+        setTimeout(() => p.remove(), fall);
+      }
+    });
+
+    // Copy link
+    copyBtn.addEventListener("click", async () => {
+      try{
+        await navigator.clipboard.writeText(window.location.href);
+        copyBtn.textContent = "Copied ✅";
+        setTimeout(()=> copyBtn.textContent = "Copy this link", 1200);
+      } catch(e){
+        alert("Couldn’t copy automatically — just copy the URL from the address bar.");
+      }
+    });
+  </script>
+</body>
+</html>
