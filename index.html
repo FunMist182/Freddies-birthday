@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday Freddie 🎉</title>
   <meta name="description" content="A birthday page for Freddie." />
+
   <style>
     :root{
       --bg:#0b0d12;
@@ -15,30 +16,42 @@
       --shadow: 0 12px 40px rgba(0,0,0,.45);
       --radius:18px;
     }
-    *{box-sizing:border-box}
+
+    *{ box-sizing:border-box }
+
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 700px at 20% 0%, rgba(120,160,255,.18), transparent 60%),
-                  radial-gradient(1200px 700px at 90% 10%, rgba(255,140,200,.12), transparent 55%),
-                  var(--bg);
+      background:
+        radial-gradient(1200px 700px at 20% 0%, rgba(120,160,255,.18), transparent 60%),
+        radial-gradient(1200px 700px at 90% 10%, rgba(255,140,200,.12), transparent 55%),
+        var(--bg);
       color:var(--text);
       line-height:1.5;
     }
-    a{color:inherit}
-    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 70px}
+
+    a{ color:inherit }
+
+    .wrap{ max-width:980px; margin:0 auto; padding:28px 18px 70px }
+
     .nav{
-      display:flex;justify-content:space-between;align-items:center;
-      padding:14px 16px;border:1px solid var(--line);
-      background:rgba(17,21,34,.6);backdrop-filter: blur(10px);
-      border-radius:999px; box-shadow: var(--shadow);
-      position:sticky;top:14px;z-index:20;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:14px 16px;
+      border:1px solid var(--line);
+      background:rgba(17,21,34,.6);
+      backdrop-filter: blur(10px);
+      border-radius:999px;
+      box-shadow: var(--shadow);
+      position:sticky; top:14px; z-index:20;
     }
-    .brand{display:flex;gap:10px;align-items:center;font-weight:700;letter-spacing:.2px}
-    .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,#7aa2ff,#ff8ac8)}
-    .links{display:flex;gap:14px;font-size:14px;color:var(--muted)}
-    .links a{opacity:.9;text-decoration:none}
-    .links a:hover{opacity:1;color:var(--text)}
+
+    .brand{ display:flex; gap:10px; align-items:center; font-weight:700; letter-spacing:.2px }
+    .dot{ width:10px; height:10px; border-radius:999px; background:linear-gradient(135deg,#7aa2ff,#ff8ac8) }
+
+    .links{ display:flex; gap:14px; font-size:14px; color:var(--muted) }
+    .links a{ opacity:.9; text-decoration:none }
+    .links a:hover{ opacity:1; color:var(--text) }
+
     .hero{
       margin-top:22px;
       border:1px solid var(--line);
@@ -50,28 +63,39 @@
       overflow:hidden;
       position:relative;
     }
+
     .hero:before{
       content:"";
-      position:absolute;inset:-2px;
-      background: radial-gradient(700px 260px at 20% 30%, rgba(122,162,255,.18), transparent 55%),
-                  radial-gradient(520px 220px at 85% 35%, rgba(255,138,200,.12), transparent 60%);
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(700px 260px at 20% 30%, rgba(122,162,255,.18), transparent 55%),
+        radial-gradient(520px 220px at 85% 35%, rgba(255,138,200,.12), transparent 60%);
       pointer-events:none;
     }
-    .hero > *{position:relative}
+
+    .hero > *{ position:relative }
+
     .kicker{
-      display:inline-flex;gap:10px;align-items:center;
-      padding:8px 12px;border:1px solid var(--line);
-      border-radius:999px;background:rgba(255,255,255,.03);
-      color:var(--muted);font-size:13px;
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
     }
+
     .title{
       margin:16px 0 8px;
       font-size: clamp(34px, 6vw, 54px);
       letter-spacing:-.6px;
       line-height:1.05;
     }
-    .subtitle{max-width:62ch;color:var(--muted);font-size:16px;margin:0 0 18px}
-    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+
+    .subtitle{ max-width:62ch; color:var(--muted); font-size:16px; margin:0 0 18px }
+
+    .ctaRow{ display:flex; gap:12px; flex-wrap:wrap; margin-top:18px }
+
     .btn{
       border:1px solid var(--line);
       background:rgba(255,255,255,.05);
@@ -82,15 +106,17 @@
       font-weight:600;
       transition: transform .08s ease, background .2s ease, border-color .2s ease;
     }
-    .btn:hover{background:rgba(255,255,255,.08)}
-    .btn:active{transform: translateY(1px)}
+    .btn:hover{ background:rgba(255,255,255,.08) }
+    .btn:active{ transform: translateY(1px) }
+
     .btn.primary{
       background:linear-gradient(135deg, rgba(122,162,255,.95), rgba(255,138,200,.92));
       border-color: transparent;
       color:#0b0d12;
     }
 
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:18px}
+    .grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:16px; margin-top:18px }
+
     .card{
       grid-column: span 6;
       border:1px solid var(--line);
@@ -100,19 +126,32 @@
       padding:18px;
       box-shadow: var(--shadow);
     }
-    .card h3{margin:0 0 8px;font-size:16px}
-    .card p{margin:0;color:var(--muted);font-size:14px}
-    .list{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+
+    .card h3{ margin:0 0 8px; font-size:16px }
+    .card p{ margin:0; color:var(--muted); font-size:14px }
+
+    .list{ margin:12px 0 0; padding:0; list-style:none; display:grid; gap:10px }
+
     .pill{
       border:1px solid var(--line);
       background:rgba(255,255,255,.03);
       border-radius:14px;
       padding:12px 12px;
-      display:flex;gap:10px;align-items:flex-start;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
     }
-    .emoji{width:28px;height:28px;display:grid;place-items:center;border-radius:10px;background:rgba(255,255,255,.05);flex:0 0 auto}
-    .pill strong{display:block;font-size:14px}
-    .pill span{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+
+    .emoji{
+      width:28px; height:28px;
+      display:grid; place-items:center;
+      border-radius:10px;
+      background:rgba(255,255,255,.05);
+      flex:0 0 auto;
+    }
+
+    .pill strong{ display:block; font-size:14px }
+    .pill span{ display:block; color:var(--muted); font-size:13px; margin-top:2px }
 
     .section{
       margin-top:18px;
@@ -123,57 +162,117 @@
       padding: 18px;
       box-shadow: var(--shadow);
     }
-    .sectionHeader{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin-bottom:10px}
-    .sectionHeader h2{margin:0;font-size:18px}
-    .hint{color:var(--muted);font-size:13px}
 
+    .sectionHeader{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:10px;
+      margin-bottom:10px;
+    }
+
+    .sectionHeader h2{ margin:0; font-size:18px }
+    .hint{ color:var(--muted); font-size:13px }
+
+    /* Memories grid */
     .gallery{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:12px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap:16px;
       margin-top:10px;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
 
-    .slider {
-      overflow: hidden;
-      width: 100%;
-    }
-    
-    .slides {
-      display: flex;
-      gap: 12px;
-      animation: scrollPics 5s linear infinite;
-    }
-    
-    .slides img {
-      height: 260px;   /* smaller images */
-      border-radius: 14px;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-    
-    @keyframes scrollPics {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-
-
-    .ph{
-      border:1px dashed rgba(255,255,255,.18);
+    .memory-card{
+      border:1px solid rgba(255,255,255,.12);
       border-radius: 16px;
-      padding:16px;
       background: rgba(255,255,255,.02);
-      color: var(--muted);
-      min-height:120px;
-      display:flex;flex-direction:column;justify-content:space-between;
+      overflow:hidden;
     }
-    .ph small{opacity:.9}
-    .ph b{color:var(--text)}
+
+    .memory-card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .memory-caption{
+      padding:12px 12px 14px;
+      color: var(--muted);
+      font-size:13px;
+    }
+
+    /* Swipeable slideshow */
+    .swipe-wrap{ position: relative; margin-top: 12px; }
+
+    .swipe-track{
+      display:flex;
+      gap:14px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      scroll-behavior:smooth;
+      -webkit-overflow-scrolling: touch;
+      padding: 6px 6px 14px;
+      scrollbar-width: none;
+    }
+    .swipe-track::-webkit-scrollbar{ display:none; }
+
+    .swipe-slide{
+      flex: 0 0 82%;
+      scroll-snap-align: center;
+    }
+
+    .swipe-slide img{
+      width:100%;
+      height: 320px; /* slideshow size */
+      object-fit: cover;
+      border-radius: 18px;
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+      display:block;
+    }
+
+    .swipe-btn{
+      position:absolute;
+      top:50%;
+      transform: translateY(-50%);
+      width:42px;
+      height:42px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(17,21,34,.65);
+      color: var(--text);
+      cursor:pointer;
+      z-index: 5;
+      backdrop-filter: blur(10px);
+      display:grid;
+      place-items:center;
+      font-size: 22px;
+      user-select:none;
+    }
+    .swipe-btn:hover{ background: rgba(17,21,34,.85); }
+    .swipe-btn.left{ left: 6px; }
+    .swipe-btn.right{ right: 6px; }
+
+    .swipe-dots{
+      display:flex;
+      gap:8px;
+      justify-content:center;
+      margin-top:10px;
+    }
+    .swipe-dots button{
+      width:9px;
+      height:9px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.15);
+      cursor:pointer;
+      padding:0;
+    }
+    .swipe-dots button[aria-current="true"]{
+      background: rgba(255,255,255,.7);
+    }
+
     .footer{
       margin-top:18px;
       text-align:center;
@@ -181,6 +280,7 @@
       font-size:13px;
       opacity:.95;
     }
+
     dialog{
       border:none;
       border-radius:18px;
@@ -190,17 +290,28 @@
       width:min(640px, 92vw);
       padding:0;
     }
-    dialog::backdrop{background:rgba(0,0,0,.55)}
+    dialog::backdrop{ background:rgba(0,0,0,.55) }
+
     .modal{
       padding:18px;
       border:1px solid var(--line);
       border-radius:18px;
     }
-    .modalHeader{display:flex;justify-content:space-between;align-items:center;gap:10px}
-    .modalHeader h3{margin:0;font-size:16px}
-    .x{background:transparent;border:1px solid var(--line);color:var(--text);border-radius:999px;padding:8px 10px;cursor:pointer}
-    .x:hover{background:rgba(255,255,255,.06)}
-    .modal p{color:var(--muted);margin:12px 0 0}
+    .modalHeader{ display:flex; justify-content:space-between; align-items:center; gap:10px }
+    .modalHeader h3{ margin:0; font-size:16px }
+
+    .x{
+      background:transparent;
+      border:1px solid var(--line);
+      color:var(--text);
+      border-radius:999px;
+      padding:8px 10px;
+      cursor:pointer;
+    }
+    .x:hover{ background:rgba(255,255,255,.06) }
+
+    .modal p{ color:var(--muted); margin:12px 0 0 }
+
     .bigMsg{
       margin-top:12px;
       padding:14px;
@@ -212,26 +323,22 @@
       line-height:1.55;
       white-space: pre-wrap;
     }
+
     @media (max-width: 780px){
-      .card{grid-column: span 12}
-      .gallery{grid-template-columns:1fr}
-      .links{display:none}
+      .card{ grid-column: span 12 }
+      .links{ display:none }
     }
 
-    @media (max-width: 768px) {
-      .gallery {
-        grid-template-columns: 1fr !important;
-      }
-    
-      .gallery img {
-        height: 180px !important;
-      }
-    
-      .card {
-        grid-column: span 12 !important;
-      }
+    @media (max-width: 768px){
+      .memory-card img{ height: 200px; }
+      .swipe-slide{ flex-basis: 92%; }
+      .swipe-slide img{ height: 260px; }
     }
 
+    @media (min-width: 900px){
+      .swipe-slide{ flex-basis: 55%; }
+      .swipe-slide img{ height: 380px; }
+    }
   </style>
 </head>
 
@@ -245,6 +352,7 @@
       <div class="links">
         <a href="#highlights">Highlights</a>
         <a href="#memories">Memories</a>
+        <a href="#more-memories">More pics</a>
         <a href="#message">Message</a>
       </div>
     </div>
@@ -265,12 +373,12 @@
 
     <div class="grid" id="highlights">
       <div class="card">
-        <h3>Why you’re a top tier nigga</h3>
+        <h3>Why you’re top tier</h3>
         <ul class="list">
           <li class="pill"><div class="emoji">✅</div><div><strong>Always shows up</strong><span>Proper reliable, what Byron lacks.</span></div></li>
-          <li class="pill"><div class="emoji">😂</div><div><strong>Elite humour</strong><span>Even when it’s a Freddie commeent.</span></div></li>
+          <li class="pill"><div class="emoji">😂</div><div><strong>Elite humour</strong><span>Even when it’s a Freddie comment.</span></div></li>
           <li class="pill"><div class="emoji">🧠</div><div><strong>Never cowers from drinking</strong><span>Makes plans better just by being there.</span></div></li>
-          <li class="pill"><div class="emoji">🫡</div><div><strong>Loyalty</strong><span>Real nigga behaviour.</span></div></li>
+          <li class="pill"><div class="emoji">🫡</div><div><strong>Loyalty</strong><span>Real one behaviour.</span></div></li>
         </ul>
       </div>
 
@@ -278,7 +386,7 @@
         <h3>Freddie stats (official)</h3>
         <ul class="list">
           <li class="pill"><div class="emoji">⭐</div><div><strong>Freddie Comments</strong><span>∞</span></div></li>
-          <li class="pill"><div class="emoji">📈</div><div><strong>Glow-up</strong><span>10/10 keep it up nigga.</span></div></li>
+          <li class="pill"><div class="emoji">📈</div><div><strong>Glow-up</strong><span>10/10 keep it up.</span></div></li>
           <li class="pill"><div class="emoji">🫡</div><div><strong>Most beers in a night</strong><span>18</span></div></li>
           <li class="pill"><div class="emoji">💕</div><div><strong>Body Count</strong><span>1</span></div></li>
         </ul>
@@ -291,33 +399,64 @@
       </div>
 
       <div class="gallery">
-        <div class="ph">
-          <div>
-            <div class="ph">
-              <img src="processed-DEA4BA6C-8B3B-4349-AB1A-EFE26F94EFFA.jpeg">
-            </div>
-            <p style="margin:8px 0 0; color: var(--muted); font-size:13px;">Caption: “The day we blacked tf out in Girona like all real men should.”</p>
-          </div>
+        <div class="memory-card">
+          <img src="processed-DEA4BA6C-8B3B-4349-AB1A-EFE26F94EFFA.jpeg" alt="Memory 1">
+          <div class="memory-caption">“The day we blacked tf out in Girona like all real men should.”</div>
         </div>
 
-        <div class="ph">
-          <div>
-            <div class="ph">
-              <img src="processed-72085593-6B24-4238-9EC8-04330F92AE7D.jpeg">
-            </div>
-            <p style="margin:8px 0 0; color: var(--muted); font-size:13px;">Caption: “Still hasnt let me crack btw 😒”</p>
-          </div>
+        <div class="memory-card">
+          <img src="processed-72085593-6B24-4238-9EC8-04330F92AE7D.jpeg" alt="Memory 2">
+          <div class="memory-caption">“Still hasn’t let me crack btw 😒”</div>
         </div>
 
-        <div class="ph">
-          <div>
-            <div class="ph">
-              <img src="original-7CC69319-5E27-4749-9DF1-31F0CE233007.jpeg">
-            </div>
-            <p style="margin:8px 0 0; color: var(--muted); font-size:13px;">Caption: “Bring back the mustache 😝😝”</p>
-          </div>
+        <div class="memory-card">
+          <img src="original-7CC69319-5E27-4749-9DF1-31F0CE233007.jpeg" alt="Memory 3">
+          <div class="memory-caption">“Bring back the mustache 😝😝”</div>
         </div>
       </div>
+    </section>
+
+    <section class="section" id="more-memories">
+      <div class="sectionHeader">
+        <h2>More memories 📸</h2>
+        <div class="hint">Swipe on mobile • Use arrows on desktop</div>
+      </div>
+
+      <div class="swipe-wrap">
+        <button class="swipe-btn left" type="button" aria-label="Previous photo">‹</button>
+
+        <div class="swipe-track" id="swipeTrack">
+          <div class="swipe-slide"><img src="original-081BFAC1-6833-43E2-8E24-F437F30F8618.jpeg" alt="Photo 1"></div>
+          <div class="swipe-slide"><img src="original-0D871454-9470-4CCD-A396-A4B0E48132F4.jpeg" alt="Photo 2"></div>
+          <div class="swipe-slide"><img src="original-1930A130-ADBC-4215-B352-707354BBA2F0.jpeg" alt="Photo 3"></div>
+          <div class="swipe-slide"><img src="original-2F1DCD85-4105-4126-9DC1-05146CA15749.jpeg" alt="Photo 4"></div>
+          <div class="swipe-slide"><img src="original-4ECD8F0F-4D2E-495E-8E02-2F129D49B6CF.jpeg" alt="Photo 5"></div>
+          <div class="swipe-slide"><img src="original-54CAC914-68F4-40B5-88A9-A01147E0EDB7.jpeg" alt="Photo 6"></div>
+          <div class="swipe-slide"><img src="original-59B0AC07-BB9B-45BA-A079-4CDB83217254.jpeg" alt="Photo 7"></div>
+          <div class="swipe-slide"><img src="original-8D1FDA16-52E2-482C-9463-2A443116657E.jpeg" alt="Photo 8"></div>
+          <div class="swipe-slide"><img src="original-8F66F434-3FD6-4DCF-B65E-959200C99612.jpeg" alt="Photo 9"></div>
+          <div class="swipe-slide"><img src="original-93D3657D-EE70-4EF4-8D7E-DA9B779E7D31.jpeg" alt="Photo 10"></div>
+          <div class="swipe-slide"><img src="original-9D823A98-31A1-4546-85C0-9960FFAD0781.jpeg" alt="Photo 11"></div>
+          <div class="swipe-slide"><img src="original-B06E90FE-BCDF-4030-96D7-389991C1EFB4.jpeg" alt="Photo 12"></div>
+          <div class="swipe-slide"><img src="original-DE2A4CC2-80DB-47A3-B639-3D00B8FD098E.jpeg" alt="Photo 13"></div>
+          <div class="swipe-slide"><img src="processed-03CE5A53-6F68-4D30-9ECD-3A3C2E2F2BBC.jpeg" alt="Photo 14"></div>
+          <div class="swipe-slide"><img src="processed-1D9C2773-7783-415F-9B4F-57D91286D182.jpeg" alt="Photo 15"></div>
+          <div class="swipe-slide"><img src="processed-280068C7-A7BD-466C-9882-E9F7102C9DF3.jpeg" alt="Photo 16"></div>
+          <div class="swipe-slide"><img src="processed-46EC7D59-83E2-4601-ADD9-6DBE29FB8A57.jpeg" alt="Photo 17"></div>
+          <div class="swipe-slide"><img src="processed-7231FF6F-0722-499C-B076-DA0A25443BA3.jpeg" alt="Photo 18"></div>
+          <div class="swipe-slide"><img src="processed-9B57506E-D2E7-480D-834B-554972CB357E.jpeg" alt="Photo 19"></div>
+          <div class="swipe-slide"><img src="processed-A2F54868-4669-42C3-B757-2AB48083F86E.jpeg" alt="Photo 20"></div>
+          <div class="swipe-slide"><img src="processed-A40E3186-38E4-4943-A8E6-A46A1E67A0E6.jpeg" alt="Photo 21"></div>
+          <div class="swipe-slide"><img src="processed-A6EBEED5-9429-4176-A041-E5C2AB93F38D.jpeg" alt="Photo 22"></div>
+          <div class="swipe-slide"><img src="processed-BB9BAF88-4833-49B7-A8B1-D2066A0B89B8.jpeg" alt="Photo 23"></div>
+          <div class="swipe-slide"><img src="processed-D7BA7658-8718-461A-BBF9-09746F1F9527.jpeg" alt="Photo 24"></div>
+          <div class="swipe-slide"><img src="processed-DC5E941F-2230-4689-9421-300C10B903CB.jpeg" alt="Photo 25"></div>
+        </div>
+
+        <button class="swipe-btn right" type="button" aria-label="Next photo">›</button>
+      </div>
+
+      <div class="swipe-dots" id="swipeDots" aria-label="Slideshow pagination"></div>
     </section>
 
     <section class="section" id="message">
@@ -342,26 +481,25 @@
       <div class="bigMsg" id="bigMsg">
 Happy birthday Freddie!
 
-Honestly, you’re one of the best people i've ever met, your presence always brightens up my day even though you're an autistic little fuck.
+Honestly, you’re one of the best people i've ever met — your presence always brightens up my day.
 
-I know without a shadow of a doubt that we will be friends until i eventually pass away from liver failure. 
-        
-Have an unreal day. You deserve it nigga. 🎂🎉
+I know without a shadow of a doubt that we will be friends until i eventually pass away from liver failure.
+
+Have an unreal day. You deserve it. 🎂🎉
       </div>
     </div>
   </dialog>
 
   <script>
+    // Modal
     const modal = document.getElementById("surpriseModal");
     const openBtn = document.getElementById("openSurprise");
     const closeBtn = document.getElementById("closeModal");
-    const confettiBtn = document.getElementById("confetti");
-    const copyBtn = document.getElementById("copyLink");
-
     openBtn.addEventListener("click", () => modal.showModal());
     closeBtn.addEventListener("click", () => modal.close());
 
-    // Simple confetti (no libraries)
+    // Confetti (no libraries)
+    const confettiBtn = document.getElementById("confetti");
     confettiBtn.addEventListener("click", () => {
       const count = 140;
       for (let i = 0; i < count; i++) {
@@ -391,6 +529,7 @@ Have an unreal day. You deserve it nigga. 🎂🎉
     });
 
     // Copy link
+    const copyBtn = document.getElementById("copyLink");
     copyBtn.addEventListener("click", async () => {
       try{
         await navigator.clipboard.writeText(window.location.href);
@@ -400,79 +539,77 @@ Have an unreal day. You deserve it nigga. 🎂🎉
         alert("Couldn’t copy automatically — just copy the URL from the address bar.");
       }
     });
-  </script>
-  <section class="section">
-    <h2>More memories 📸</h2>
-  
-    <div class="slider">
-      <div class="slides">
-        <img src="original-081BFAC1-6833-43E2-8E24-F437F30F8618.jpeg">
-        <img src="original-0D871454-9470-4CCD-A396-A4B0E48132F4.jpeg">
-        <img src="original-1930A130-ADBC-4215-B352-707354BBA2F0.jpeg">
-        <img src="original-2F1DCD85-4105-4126-9DC1-05146CA15749.jpeg">
-        <img src="original-4ECD8F0F-4D2E-495E-8E02-2F129D49B6CF.jpeg">
-        <img src="original-54CAC914-68F4-40B5-88A9-A01147E0EDB7.jpeg">
-        <img src="original-59B0AC07-BB9B-45BA-A079-4CDB83217254.jpeg">
-        <img src="original-8D1FDA16-52E2-482C-9463-2A443116657E.jpeg">
-        <img src="original-8F66F434-3FD6-4DCF-B65E-959200C99612.jpeg">
-        <img src="original-93D3657D-EE70-4EF4-8D7E-DA9B779E7D31.jpeg">
-        <img src="original-9D823A98-31A1-4546-85C0-9960FFAD0781.jpeg">
-        <img src="original-B06E90FE-BCDF-4030-96D7-389991C1EFB4.jpeg">
-        <img src="original-DE2A4CC2-80DB-47A3-B639-3D00B8FD098E.jpeg">
-        <img src="processed-03CE5A53-6F68-4D30-9ECD-3A3C2E2F2BBC.jpeg">
-        <img src="processed-1D9C2773-7783-415F-9B4F-57D91286D182.jpeg">
-        <img src="processed-280068C7-A7BD-466C-9882-E9F7102C9DF3.jpeg">
-        <img src="processed-46EC7D59-83E2-4601-ADD9-6DBE29FB8A57.jpeg">
-        <img src="processed-7231FF6F-0722-499C-B076-DA0A25443BA3.jpeg">
-        <img src="processed-9B57506E-D2E7-480D-834B-554972CB357E.jpeg">
-        <img src="processed-A2F54868-4669-42C3-B757-2AB48083F86E.jpeg">
-        <img src="processed-A40E3186-38E4-4943-A8E6-A46A1E67A0E6.jpeg">
-        <img src="processed-A6EBEED5-9429-4176-A041-E5C2AB93F38D.jpeg">
-        <img src="processed-BB9BAF88-4833-49B7-A8B1-D2066A0B89B8.jpeg">
-        <img src="processed-D7BA7658-8718-461A-BBF9-09746F1F9527.jpeg">
-        <img src="processed-DC5E941F-2230-4689-9421-300C10B903CB.jpeg">
-        <img src="original-081BFAC1-6833-43E2-8E24-F437F30F8618.jpeg">
-        <img src="original-0D871454-9470-4CCD-A396-A4B0E48132F4.jpeg">
-        <img src="original-1930A130-ADBC-4215-B352-707354BBA2F0.jpeg">
-        <img src="original-2F1DCD85-4105-4126-9DC1-05146CA15749.jpeg">
-        <img src="original-4ECD8F0F-4D2E-495E-8E02-2F129D49B6CF.jpeg">
-        <img src="original-54CAC914-68F4-40B5-88A9-A01147E0EDB7.jpeg">
-        <img src="original-59B0AC07-BB9B-45BA-A079-4CDB83217254.jpeg">
-        <img src="original-8D1FDA16-52E2-482C-9463-2A443116657E.jpeg">
-        <img src="original-8F66F434-3FD6-4DCF-B65E-959200C99612.jpeg">
-        <img src="original-93D3657D-EE70-4EF4-8D7E-DA9B779E7D31.jpeg">
-        <img src="original-9D823A98-31A1-4546-85C0-9960FFAD0781.jpeg">
-        <img src="original-B06E90FE-BCDF-4030-96D7-389991C1EFB4.jpeg">
-        <img src="original-DE2A4CC2-80DB-47A3-B639-3D00B8FD098E.jpeg">
-        <img src="processed-03CE5A53-6F68-4D30-9ECD-3A3C2E2F2BBC.jpeg">
-        <img src="processed-1D9C2773-7783-415F-9B4F-57D91286D182.jpeg">
-        <img src="processed-280068C7-A7BD-466C-9882-E9F7102C9DF3.jpeg">
-        <img src="processed-46EC7D59-83E2-4601-ADD9-6DBE29FB8A57.jpeg">
-        <img src="processed-7231FF6F-0722-499C-B076-DA0A25443BA3.jpeg">
-        <img src="processed-9B57506E-D2E7-480D-834B-554972CB357E.jpeg">
-        <img src="processed-A2F54868-4669-42C3-B757-2AB48083F86E.jpeg">
-        <img src="processed-A40E3186-38E4-4943-A8E6-A46A1E67A0E6.jpeg">
-        <img src="processed-A6EBEED5-9429-4176-A041-E5C2AB93F38D.jpeg">
-        <img src="processed-BB9BAF88-4833-49B7-A8B1-D2066A0B89B8.jpeg">
-        <img src="processed-D7BA7658-8718-461A-BBF9-09746F1F9527.jpeg">
-        <img src="processed-DC5E941F-2230-4689-9421-300C10B903CB.jpeg">
-    </div>
-  </div>
-</section>
 
+    // Swipeable slideshow controls
+    (() => {
+      const track = document.getElementById("swipeTrack");
+      const dotsWrap = document.getElementById("swipeDots");
+      const leftBtn = document.querySelector(".swipe-btn.left");
+      const rightBtn = document.querySelector(".swipe-btn.right");
+      if (!track || !dotsWrap) return;
+
+      const slides = Array.from(track.querySelectorAll(".swipe-slide"));
+
+      // Build dots
+      const dots = slides.map((_, i) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-label", `Go to photo ${i + 1}`);
+        b.addEventListener("click", () => scrollToIndex(i));
+        dotsWrap.appendChild(b);
+        return b;
+      });
+
+      function gapPx(){
+        const styles = window.getComputedStyle(track);
+        const g = styles.columnGap || styles.gap || "14px";
+        const n = parseFloat(g);
+        return Number.isFinite(n) ? n : 14;
+      }
+
+      function slideStep(){
+        const first = slides[0];
+        if (!first) return 0;
+        return first.getBoundingClientRect().width + gapPx();
+      }
+
+      function scrollToIndex(i){
+        const step = slideStep() || 1;
+        track.scrollTo({ left: i * step, behavior: "smooth" });
+      }
+
+      function currentIndex(){
+        const step = slideStep() || 1;
+        return Math.round(track.scrollLeft / step);
+      }
+
+      function setActiveDot(i){
+        dots.forEach((d, idx) => d.setAttribute("aria-current", idx === i ? "true" : "false"));
+      }
+
+      // Update dot on scroll (throttled)
+      let t = null;
+      track.addEventListener("scroll", () => {
+        if (t) return;
+        t = setTimeout(() => {
+          const idx = Math.max(0, Math.min(slides.length - 1, currentIndex()));
+          setActiveDot(idx);
+          t = null;
+        }, 80);
+      });
+
+      // Arrows
+      leftBtn?.addEventListener("click", () => scrollToIndex(Math.max(0, currentIndex() - 1)));
+      rightBtn?.addEventListener("click", () => scrollToIndex(Math.min(slides.length - 1, currentIndex() + 1)));
+
+      // Keyboard (desktop)
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") leftBtn?.click();
+        if (e.key === "ArrowRight") rightBtn?.click();
+      });
+
+      setActiveDot(0);
+    })();
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
